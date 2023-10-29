@@ -5,6 +5,7 @@ import LandingPage from './Pages/LandingPage'
 import Navigation from "./Components/Navigation";
 import Footer from "./Components/Footer";
 import ShowNow from './Pages/ShopPage'
+import ProductPage from './Components/ProductPage'
 
 function App() {
   return (
@@ -19,6 +20,9 @@ function App() {
           <Route path="/shop/:type" element={<ShowNow />} />
         </Routes>
 
+        <Routes>
+          <Route path="/product/:articleId" element={<ProductPage />} />
+        </Routes>
 
         <Footer />
       </BrowserRouter>

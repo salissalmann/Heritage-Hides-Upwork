@@ -3,14 +3,13 @@ import { Products } from "../Meta/BackbacksMeta"
 import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
-
 export default function ShopPage() {
     const navigate = useNavigate()
     const { type } = useParams()
     const [products, setProducts] = useState(Products)
     useEffect(() => {
         window.scrollTo(0, 0)
-    }, [])
+    }, [type])
     useEffect((
     ) => {
         if (type) {
@@ -99,28 +98,43 @@ export default function ShopPage() {
                             (product) => {
                                 return (
                                     <div className="p-4 md:w-1/4">
-                                        <div className="h-full border b-1 border-yellow-500 rounded overflow-hidden bg-new-500 p-3">
-                                            <img className="max-h-40 w-full object-cover object-center bg-new-600" src={`/Products/${product["Article-No"]}-removebg-preview.png`} alt="blog" />
+                                        <div className="h-full border b-1 border-yellow-500 rounded overflow-hidden bg-new-600 p-3">
+                                            <img className="max-h-50 w-full object-cover object-center bg-brown-700"
+                                                loading="lazy"
+                                                src={`/Products/${product["Article-No"]}.jpg`} alt="blog" />
                                             <div className="pt-1">
-                                                <h2 className="tracking-widest text-xs title-font font-mediummb-1 bg-new-500 border border-brown-700
-                                                text-brown-700 px-2 py-1 rounded
+                                                <h2 className="tracking-widest text-xs title-font font-mediummb-1 bg-brown-700 text-white border border-brown-700
+                                                px-2 py-1 rounded
                                                 mt-3
                                                 inline-block
                                                 uppercase
                                                 font-ragdhani
                                                 ">{product.Category}</h2>
-                                                <h1 className="title-font text-lg font-medium text-gray-900 mb-1 mt-3 font-ragdhani">Article No: {product["Article-No"]}</h1>
+                                                <h1 className="text-lg  text-gray-900 mb-1 mt-3 font-ragdhani">Article No: {product["Article-No"]}</h1>
                                                 <p className="leading-relaxed mb-3 line-clamp-2 font-ragdhani 
                                                 text-black-700 font-thin font-sm">{product.Description}</p>
                                                 <div className="flex items-center flex-wrap">
                                                     <button
-                                                        className="text-brown-700 border border-brown-700 b-1 flex justify-center items-center bg-new-500 font-ragdhani font-semibold mt-3 py-[0.3rem] px-5 focus:outline-none text-sm font-ragdhani
-                                                        hover:bg-brown-700 hover:text-white
+                                                        className="text-white border border-brown-700 b-1 flex justify-center items-center
+                                                         bg-brown-700 font-ragdhani 
+                                                         mt-3 py-[0.3rem] px-5 focus:outline-none text-sm font-ragdhani
+                                                        hover:bg-new-500 hover:text-brown-700
+                                                        hover:border
+                                                        hover:border-brown-700
+                                                        cursor-pointer
                                                         transition
                                                         duration-300
                                                         ease-in-out
-                                                        
-                                                        ">View Now</button>
+                                                    
+                                                        "
+                                                        onClick={
+                                                            () => {
+                                                                navigate(
+                                                                    `/product/${product["Article-No"]}`
+                                                                )
+                                                            }
+                                                        }
+                                                    >View Now</button>
                                                 </div>
                                             </div>
                                         </div>
@@ -130,7 +144,7 @@ export default function ShopPage() {
                         )}
                     </div>
                 </div>
-            </section>
+            </section>\
         </>
     )
 }

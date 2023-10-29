@@ -1,5 +1,6 @@
-
+import { useNavigate } from "react-router-dom"
 export default function Navigation() {
+    const navigate = useNavigate()
     return (
         <>
             <header className="bg-brown-500 fixed 
@@ -48,7 +49,7 @@ export default function Navigation() {
                                     <li>
                                         <a
                                             className="text-white transition hover:text-white/75 font-rajdhani text-md"
-                                            href="/"
+                                            onClick={() => navigate('/shop-now')}
                                         >
                                             Shop Now
                                         </a>

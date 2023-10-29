@@ -1,16 +1,13 @@
 import styles from './styles.module.css'
 import '@splidejs/react-splide/css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
-import Navigation from '../Components/Navigation';
 import Discover from '../Components/Discover';
 import About from '../Components/About';
-import Footer from '../Components/Footer';
 
 
 export default function LandingPage() {
     return (
         <>
-            <Navigation />
             <div className={styles.Slider}>
 
                 <Splide
@@ -66,7 +63,6 @@ export default function LandingPage() {
                 <About />
             </div>
 
-            <Footer />
 
 
 

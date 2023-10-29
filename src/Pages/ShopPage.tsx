@@ -28,7 +28,7 @@ export default function ShopPage() {
         <>
             <section className="text-gray-600 body-font">
                 <header className="text-center mt-24">
-                    <h2 className="text-xl font-bold text-brown-500 sm:text-4xl font-rajdhani">
+                    <h2 className="text-xl font-bold text-brown-700 sm:text-4xl font-rajdhani">
                         {type &&
                             (type === "all")
                             ? "Our Collection"
@@ -36,7 +36,7 @@ export default function ShopPage() {
                             type && type.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ')
                         }
                     </h2>
-                    <p className="max-w-md mx-auto mt-1 text-brown-500 font-semibold font-rajdhani">
+                    <p className="max-w-md mx-auto mt-1 text-brown-700 font-semibold font-rajdhani">
                         Shop our most popular products
                     </p>
                 </header>
@@ -50,7 +50,7 @@ export default function ShopPage() {
                                 onClick={() => {
                                     navigate('/')
                                 }}
-                                className="flex h-10 items-center gap-1.5 bg-brown-500 text-white px-4 transition hover:text-white cursor-pointer"
+                                className="flex h-10 items-center gap-1.5 bg-brown-700 text-white px-4 transition hover:text-white cursor-pointer"
                             >
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -73,12 +73,12 @@ export default function ShopPage() {
 
                         <li className="relative flex items-center">
                             <span
-                                className="absolute inset-y-0 -start-px h-10 w-4 bg-brown-500 [clip-path:_polygon(0_0,_0%_100%,_100%_50%)] rtl:rotate-180"
+                                className="absolute inset-y-0 -start-px h-10 w-4 bg-brown-700 [clip-path:_polygon(0_0,_0%_100%,_100%_50%)] rtl:rotate-180"
                             >
                             </span>
 
                             <a
-                                className="flex h-10 items-center b-1 border-brown-500 bg-new-600 pe-4 ps-8 text-xs font-medium transition hover:text-gray-900"
+                                className="flex h-10 items-center b-1 border-brown-700 bg-new-600 pe-4 ps-8 text-xs font-medium transition hover:text-gray-900"
                             >
                                 {type &&
                                     (type === "all")
@@ -102,8 +102,8 @@ export default function ShopPage() {
                                         <div className="h-full border b-1 border-yellow-500 rounded overflow-hidden bg-new-500 p-3">
                                             <img className="max-h-40 w-full object-cover object-center bg-new-600" src={`/Products/${product["Article-No"]}-removebg-preview.png`} alt="blog" />
                                             <div className="pt-1">
-                                                <h2 className="tracking-widest text-xs title-font font-mediummb-1 bg-new-500 border border-brown-500
-                                                text-brown-500 px-2 py-1 rounded
+                                                <h2 className="tracking-widest text-xs title-font font-mediummb-1 bg-new-500 border border-brown-700
+                                                text-brown-700 px-2 py-1 rounded
                                                 mt-3
                                                 inline-block
                                                 uppercase
@@ -114,8 +114,8 @@ export default function ShopPage() {
                                                 text-black-700 font-thin font-sm">{product.Description}</p>
                                                 <div className="flex items-center flex-wrap">
                                                     <button
-                                                        className="text-brown-500 border border-brown-500 b-1 flex justify-center items-center bg-new-500 font-ragdhani font-semibold mt-3 py-[0.3rem] px-5 focus:outline-none text-sm font-ragdhani
-                                                        hover:bg-brown-500 hover:text-white
+                                                        className="text-brown-700 border border-brown-700 b-1 flex justify-center items-center bg-new-500 font-ragdhani font-semibold mt-3 py-[0.3rem] px-5 focus:outline-none text-sm font-ragdhani
+                                                        hover:bg-brown-700 hover:text-white
                                                         transition
                                                         duration-300
                                                         ease-in-out

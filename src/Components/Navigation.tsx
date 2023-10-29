@@ -3,7 +3,7 @@ export default function Navigation() {
     const navigate = useNavigate()
     return (
         <>
-            <header className="bg-brown-500 fixed 
+            <header className="bg-brown-700 fixed 
             top-0 left-0 right-0 z-20">
                 <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
                     <div className="flex h-16 items-center justify-between">
@@ -58,7 +58,7 @@ export default function Navigation() {
                                     <button
                                         className="
                                             bg-white
-                                            text-brown-500
+                                            text-brown-700
                                             px-4
                                             py-2
                                             rounded

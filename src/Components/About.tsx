@@ -5,7 +5,7 @@ export default function About() {
         <section>
             <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 lg:h-screen lg:grid-cols-2">
-                    <div className="relative flex items-center bg-brown-500">
+                    <div className="relative flex items-center bg-brown-700">
                         <span
                             className="hidden lg:absolute lg:inset-y-0 lg:-start-10 lg:block lg:w-16 "
                         ></span>

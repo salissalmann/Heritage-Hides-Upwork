@@ -2,8 +2,8 @@ import { useNavigate } from "react-router-dom"
 export default function Footer() {
     const navigate = useNavigate()
     return (
-        <footer className="text-white text-md font-rajdhani body-font bg-brown-500">
-            <div className="container px-10 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
+        <footer className="text-white text-md font-rajdhani body-font bg-brown-700">
+            <div className="container md:px-32 py-24 mx-auto flex md:items-center lg:items-start md:flex-row md:flex-nowrap flex-wrap flex-col">
                 <div className="w-64 flex-shrink-0 md:mx-0 mx-auto text-center md:text-left">
                     <a className="flex title-font font-medium items-center md:justify-start justify-center text-gray-900">
                         <img src="/Assets/Logo.png" alt="logo" className="w-10 h-10" />
@@ -12,7 +12,7 @@ export default function Footer() {
                     <p className="mt-2 text-sm text-white">Herirage Hides is a leather goods and apparel brand with a love for adventure and dedication to choosing a simpler way of living.</p>
                 </div>
                 <div className="flex-grow flex flex-wrap md:pl-20 -mb-10 md:mt-0 mt-10 md:text-left text-center">
-                    <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <div className="lg:w-1/3 md:w-1/2 w-full px-4">
                         <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">CATEGORIES</h2>
                         <nav className="list-none mb-10">
                             <li
@@ -53,7 +53,7 @@ export default function Footer() {
                             </li>
                         </nav>
                     </div>
-                    <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <div className="lg:w-1/3 md:w-1/2 w-full px-4">
                         <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">CATEGORIES</h2>
                         <nav className="list-none mb-10">
                             <li>
@@ -70,7 +70,7 @@ export default function Footer() {
                             </li>
                         </nav>
                     </div>
-                    <div className="lg:w-1/4 md:w-1/2 w-full px-4">
+                    <div className="lg:w-1/3 md:w-1/2 w-full px-4">
                         <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">Contact Us</h2>
                         <nav className="list-none mb-10">
                             <li>

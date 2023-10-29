@@ -6,8 +6,8 @@ export default function Discover() {
         <section>
             <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
                 <header className="text-center">
-                    <h2 className="text-xl font-bold text-brown-500 sm:text-4xl font-rajdhani">Featured Products</h2>
-                    <p className="max-w-md mx-auto mt-1 text-brown-500 font-semibold font-rajdhani">
+                    <h2 className="text-xl font-bold text-brown-700 sm:text-4xl font-rajdhani">Featured Products</h2>
+                    <p className="max-w-md mx-auto mt-1 text-brown-700 font-semibold font-rajdhani">
                         Shop our most popular products
                     </p>
                 </header>

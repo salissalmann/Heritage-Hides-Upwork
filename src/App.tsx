@@ -16,7 +16,7 @@ function App() {
         </Routes>
 
         <Routes>
-          <Route path="/shop-now" element={<ShowNow />} />
+          <Route path="/shop/:type" element={<ShowNow />} />
         </Routes>
 
 

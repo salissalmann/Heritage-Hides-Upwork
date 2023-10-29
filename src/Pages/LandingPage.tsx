@@ -3,9 +3,11 @@ import '@splidejs/react-splide/css';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import Discover from '../Components/Discover';
 import About from '../Components/About';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function LandingPage() {
+    const navigate = useNavigate()
     return (
         <>
             <div className={styles.Slider}>
@@ -48,8 +50,9 @@ export default function LandingPage() {
                                 font-rajdhani
                                 '>Up to 50% off on all products</p>
                                 <div className={styles.SliderBtns}>
-                                    <button>Shop Bags</button>
-                                    <button>Shop Accessories</button>
+                                    <button
+                                        onClick={() => { navigate('/shop/all') }}
+                                    >Shop Now</button>
                                 </div>
                             </div>
                         </div>

@@ -7,7 +7,7 @@ export default function Navigation() {
             top-0 left-0 right-0 z-20">
                 <div className="mx-auto max-w-screen-xl px-4 sm:px-6 lg:px-8">
                     <div className="flex h-16 items-center justify-between">
-                        <div className="flex-1 md:flex md:items-center md:gap-12">
+                        <div className="flex-1 md:flex md:items-center ">
                             <h1 className="
                             text-yellow-500
                             text-3xl
@@ -22,7 +22,8 @@ export default function Navigation() {
                                 <ul className="flex items-center gap-6 text-sm">
                                     <li>
                                         <a
-                                            className="text-white transition hover:text-white/75 font-rajdhani text-md"
+                                            className="text-white transition hover:text-white/75 font-rajdhani text-md cursor-pointer"
+                                            onClick={() => navigate('/')}
                                         >
                                             Home
                                         </a>
@@ -30,7 +31,7 @@ export default function Navigation() {
 
                                     <li>
                                         <a
-                                            className="text-white transition hover:text-white/75 font-rajdhani text-md"
+                                            className="text-white transition hover:text-white/75 font-rajdhani text-md cursor-pointer"
                                             href="/"
                                         >
                                             About
@@ -39,7 +40,7 @@ export default function Navigation() {
 
                                     <li>
                                         <a
-                                            className="text-white transition hover:text-white/75 font-rajdhani text-md"
+                                            className="text-white transition hover:text-white/75 font-rajdhani text-md cursor-pointer"
                                             href="/"
                                         >
                                             Contact
@@ -48,8 +49,8 @@ export default function Navigation() {
 
                                     <li>
                                         <a
-                                            className="text-white transition hover:text-white/75 font-rajdhani text-md"
-                                            onClick={() => navigate('/shop-now')}
+                                            className="text-white transition hover:text-white/75 font-rajdhani text-md cursor-pointer"
+                                            onClick={() => navigate('/shop/all')}
                                         >
                                             Shop Now
                                         </a>

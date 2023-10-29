@@ -1,5 +1,7 @@
+import { useNavigate } from "react-router-dom"
 
 export default function Discover() {
+    const navigate = useNavigate()
     return (
         <section>
             <div className="max-w-screen-xl px-4 py-8 mx-auto sm:px-6 sm:py-12 lg:px-8">
@@ -12,7 +14,9 @@ export default function Discover() {
 
                 <ul className="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-3">
                     <li>
-                        <a href="#" className="relative block group">
+                        <a className="relative block group" onClick={
+                            () => navigate('/shop/tote bags')
+                        }>
                             <img
                                 src="/Assets/ToteBags.png"
                                 alt=""
@@ -24,7 +28,18 @@ export default function Discover() {
                             >
                                 <h3 className="text-xl font-medium text-white">Tote Bags</h3>
                                 <span
-                                    className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                                    className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide
+                                     text-white
+                                     hover:bg-transparent
+                                        hover:text-black
+                                        transition
+                                        duration-300
+                                        hover:border
+                                        hover:border-black
+                                     "
+                                    onClick={() => {
+                                        navigate('/shop/tote bags')
+                                    }}
                                 >
                                     Shop Now
                                 </span>
@@ -33,7 +48,11 @@ export default function Discover() {
                     </li>
 
                     <li>
-                        <a href="#" className="relative block group">
+                        <a className="relative block group"
+                            onClick={
+                                () => navigate('/shop/duffle bags')
+                            }
+                        >
                             <img
                                 src="/Assets/DuffleBags.png" alt="Featured2"
                                 className="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90"
@@ -45,7 +64,18 @@ export default function Discover() {
                                 <h3 className="text-xl font-medium text-white">Duffle Bags</h3>
 
                                 <span
-                                    className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                                    className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide
+                                     text-white
+                                     hover:bg-transparent
+                                        hover:text-black
+                                        transition
+                                        duration-300
+                                        hover:border
+                                        hover:border-black
+                                     "
+                                    onClick={() => {
+                                        navigate('/shop/duffle bags')
+                                    }}
                                 >
                                     Shop Now
                                 </span>
@@ -54,7 +84,11 @@ export default function Discover() {
                     </li>
 
                     <li className="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
-                        <a href="#" className="relative block group">
+                        <a className="relative block group"
+                            onClick={
+                                () => navigate('/shop/backpacks')
+                            }
+                        >
                             <img
                                 src="/Assets/Bagpack.png"
                                 alt=""
@@ -64,10 +98,21 @@ export default function Discover() {
                             <div
                                 className="absolute inset-0 flex flex-col items-start justify-end p-6"
                             >
-                                <h3 className="text-xl font-medium text-white">Backpacks</h3>
+                                <h3 className="text-xl font-medium text-white">BackPacks</h3>
 
                                 <span
-                                    className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide text-white"
+                                    className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide
+                                     text-white
+                                     hover:bg-transparent
+                                        hover:text-black
+                                        transition
+                                        duration-300
+                                        hover:border
+                                        hover:border-black
+                                     "
+                                    onClick={() => {
+                                        navigate('/shop/backpacks')
+                                    }}
                                 >
                                     Shop Now
                                 </span>

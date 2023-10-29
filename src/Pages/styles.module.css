@@ -1,0 +1,277 @@
+.Slider {
+    margin-top: 1rem;
+}
+
+.Slide1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+    background-color: #211910;
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+}
+
+.CoverImg {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Slide1::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    z-index: 999;
+}
+
+.Slide1Text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.SliderBtns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+    font-family: 'Rajdhani';
+}
+
+.SliderBtns button {
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+.SliderBtns button:hover {
+    background-color: white;
+    color: #211910;
+}
+
+.Featured {
+    padding: 1rem;
+    background-color: #FEFBF0;
+    color: #211910;
+    font-family: 'Rubik', sans-serif;
+}
+
+.FeaturedText {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.FeaturedText h2 {
+    font-size: 2rem;
+}
+
+.FeaturedText p {
+    font-size: 1.2rem;
+    margin-top: -0.2rem;
+}
+
+.FeaturedProducts {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-gap: 0.2rem;
+    margin-top: 1rem;
+    color: white;
+    padding-bottom: 5rem;
+}
+
+.FeaturedProduct {
+    position: relative;
+    height: 20rem;
+    overflow: hidden;
+}
+
+.FeaturedProduct img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.FeaturedProduct img:hover {
+    transform: scale(1.1);
+    transition: all 0.5s ease-in-out;
+}
+
+.FeaturedProductText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.FeaturedProductText h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.FeaturedProductText p {
+    font-size: 1rem;
+    margin-top: -0.2rem;
+}
+
+.FeaturedProductText button {
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+.FeaturedProductText button:hover {
+    background-color: white;
+    color: #211910;
+}
+
+.AboutWrapper {
+    background-color: #211910;
+    font-family: 'Rubik', sans-serif;
+    padding: 1rem;
+    padding-top: 4rem;
+}
+
+.AboutText {
+    display: flex;
+    justify-content: center;
+    text-align: left !important;
+    flex-direction: column;
+    margin-bottom: 1rem;
+    padding: 2rem;
+}
+
+.AboutText h1 {
+    text-align: left !important;
+    color: #FEFAF0;
+    font-size: 2rem;
+}
+
+.AboutText p {
+    text-align: left !important;
+    font-size: 1.2rem;
+    margin-top: -0.2rem;
+    text-align: justify;
+    color: #FEFAF0;
+    font-family: 'Nunito, sans-serif'
+}
+
+.AboutText button {
+    border: none;
+    outline: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.5rem;
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
+    border: 1px solid white;
+    background-color: transparent;
+    color: white;
+}
+
+.AboutText button:hover {
+    background-color: white;
+    color: #211910;
+}
+
+.About {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.AboutImg {
+    height: 30rem;
+    overflow: hidden;
+}
+
+.AboutImg img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.Footer {
+    background-color: #FEFAF0;
+    color: #57291c;
+    padding: 1rem;
+    font-family: 'Rubik', sans-serif;
+}
+
+.FooterWrapper {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    grid-gap: 1rem;
+    margin-top: 1rem;
+}
+
+.FooterItem {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    text-transform: uppercase;
+}
+
+.FooterItem h2 {
+    margin-bottom: 0.5rem;
+    text-transform: capitalize;
+}
+
+.FooterItem p {
+    margin-top: -0.2rem;
+}
+
+.FooterItem ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+
+}
+
+.FooterItem ul li {
+    margin-bottom: 0.5rem;
+}
+
+.FooterItem ul li a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.FooterItem ul li a:hover {
+    text-decoration: underline;
+}
+
+.FooterItem ul li i {
+    margin-right: 0.5rem;
+}
+
+.FooterItemX {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    background-color: #211910;
+    padding: 1rem;
+    color: white;
+}

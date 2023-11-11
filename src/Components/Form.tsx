@@ -6,6 +6,7 @@ interface htmlFormInterface {
 
 export default function htmlForm({ artcileId }: htmlFormInterface) {
 
+    console.log(artcileId)
     const [form, setForm] = React.useState<{
         firstName: string,
         lastName: string,

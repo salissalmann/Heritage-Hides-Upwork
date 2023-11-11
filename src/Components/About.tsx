@@ -1,9 +1,9 @@
-import React from 'react'
-
+import { useNavigate } from 'react-router-dom'
 export default function About() {
+    const navigate = useNavigate()
     return (
         <section>
-            <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8">
+            <div className="mx-auto max-w-screen-2xl px-4 py-16 sm:px-6 lg:px-8 pt-3">
                 <div className="grid grid-cols-1 lg:h-screen lg:grid-cols-2">
                     <div className="relative flex items-center bg-brown-700">
                         <span
@@ -18,8 +18,10 @@ export default function About() {
                             <p className="mt-4 text-white font-rajdhani">
                                 Genuine full grain leather. Durable hardware and finishings. If it bears the Heritage Name, it’s made for the long haul.                            </p>
                             <a
-                                href="#"
                                 className="mt-8 inline-block border font-rajdhani border-white bg-transparent px-10 py-2 text-sm font-medium text-white hover:bg-transparent hover:text-indigo-600 focus:outline-none focus:ring active:text-indigo-500"
+                                onClick={() => {
+                                    navigate('/contact')
+                                }}
                             >
                                 Get in Touch
                             </a>

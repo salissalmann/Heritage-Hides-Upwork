@@ -1,63 +1,40 @@
-import styles from './styles.module.css'
 import '@splidejs/react-splide/css';
-import { Splide, SplideSlide } from '@splidejs/react-splide';
-import Discover from '../Components/Discover';
-import About from '../Components/About';
 import { useNavigate } from 'react-router-dom';
+import About from '../Components/About';
+import Discover from '../Components/Discover';
+import styles from './styles.module.css';
 
 
 export default function LandingPage() {
+    window.scrollTo(0, 0)
     const navigate = useNavigate()
     return (
         <>
             <div className={styles.Slider}>
 
-                <Splide
-                    options={{
-                        rewind: true,
-                        width: '100%',
-                        height: '100%',
-                        autoplay: true,
-                        interval: 5000,
-                        pauseOnHover: false,
-                        arrows: false,
-                        pagination: true,
-                        lazyLoad: true,
-                        classes: {
-                            arrows: styles.arrows,
-                            prev: styles.prev,
-                            next: styles.next,
-                        },
-                        loop: true,
-                    }}
-                >
-
-                    <SplideSlide>
-                        <div className={styles.Slide1}>
-                            <img src="./../Assets/Cover3.png" alt="banner1" className={styles.CoverImg} />
-                            <div className={styles.Slide1Text}>
-                                <h1 className='
+                <div className={styles.Slide1}>
+                    <img src="./../Assets/Cover3.png" alt="banner1" className={styles.CoverImg} />
+                    <div className={styles.Slide1Text}>
+                        <h1 className='
                                 text-7xl
                                 font-bold
                                 text-white
                                 text-center
                                 font-rajdhani
                                 '>EARLY HOLIDAY SALE</h1>
-                                <p className='
+                        <p className='
                                 text-2xl
                                 text-white
                                 text-center
                                 font-rajdhani
                                 '>Up to 50% off on all products</p>
-                                <div className={styles.SliderBtns}>
-                                    <button
-                                        onClick={() => { navigate('/shop/all') }}
-                                    >Shop Now</button>
-                                </div>
-                            </div>
+                        <div className={styles.SliderBtns}>
+                            <button
+                                onClick={() => { navigate('/shop/all') }}
+                            >Shop Now</button>
                         </div>
-                    </SplideSlide>
-                </Splide>
+                    </div>
+                </div>
             </div>
 
             <div className={styles.Featured}>
@@ -95,7 +72,8 @@ export default function LandingPage() {
                             focus:text-white
                             hover:border 
                             hover:border-brown-700
-                            ">
+                            "
+                        >
                             About Us
                         </button>
                         <img

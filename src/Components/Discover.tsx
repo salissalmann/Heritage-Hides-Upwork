@@ -26,7 +26,7 @@ export default function Discover() {
                             <div
                                 className="absolute inset-0 flex flex-col items-start justify-end p-6"
                             >
-                                <h3 className="text-xl font-medium text-white">Tote Bags</h3>
+                                <h3 className="text-xl font-bold font-rajdhani text-brown-700">Tote Bags</h3>
                                 <span
                                     className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide
                                      text-white
@@ -61,7 +61,7 @@ export default function Discover() {
                             <div
                                 className="absolute inset-0 flex flex-col items-start justify-end p-6"
                             >
-                                <h3 className="text-xl font-medium text-white">Duffle Bags</h3>
+                                <h3 className="text-xl font-bold font-rajdhani text-brown-700">Duffle Bags</h3>
 
                                 <span
                                     className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide
@@ -98,7 +98,7 @@ export default function Discover() {
                             <div
                                 className="absolute inset-0 flex flex-col items-start justify-end p-6"
                             >
-                                <h3 className="text-xl font-medium text-white">BackPacks</h3>
+                                <h3 className="text-xl font-bold text-brown-700 font-rajdhani">Backpacks</h3>
 
                                 <span
                                     className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide

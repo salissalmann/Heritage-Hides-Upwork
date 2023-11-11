@@ -1,5 +1,7 @@
 
 export default function Contact() {
+    window.scrollTo(0, 0)
+
     return (
         <>
             <section className="py-16 bg-new-600 font-rajdhani dark:bg-new-600">
@@ -43,7 +45,7 @@ export default function Contact() {
                                 <h2 className="mb-4 text-xl font-bold leading-9 text-brown-700 md:text-2xl ">
                                     Email</h2>
                                 <a href="#"
-                                    className="text-base font-medium text-gray-500 md:text-lg ">ITcompany@gmail.com</a>
+                                    className="text-base font-medium text-gray-500 md:text-lg ">haarisanjum@heritagehides.com  </a>
                             </div>
                         </div>
                         <div className="w-full px-4 mb-4 lg:w-1/3 lg:mb-0">

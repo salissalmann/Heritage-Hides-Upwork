@@ -20,7 +20,11 @@ export default function Footer() {
                                     navigate('/shop/all')
                                 }}
                             >
-                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer">All Products</a>
+                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer"
+                                    onClick={() => {
+                                        navigate('/shop/all')
+                                    }}
+                                >All Products</a>
                             </li>
                             <li
                                 onClick={() => {
@@ -57,16 +61,24 @@ export default function Footer() {
                         <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">Pages</h2>
                         <nav className="list-none mb-10">
                             <li>
-                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer">Home</a>
+                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer"
+                                    onClick={() => { navigate('/') }}
+                                >Home</a>
                             </li>
                             <li>
-                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer">About Us</a>
+                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer"
+                                    onClick={() => { navigate('/about') }}
+                                >About Us</a>
                             </li>
                             <li>
-                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer">Contact</a>
+                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer"
+                                    onClick={() => { navigate('/contact') }}
+                                >Contact</a>
                             </li>
                             <li>
-                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer">Request Quotatation</a>
+                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer"
+                                    onClick={() => { navigate('/quotation') }}
+                                >Request Quotatation</a>
                             </li>
 
                         </nav>
@@ -75,10 +87,10 @@ export default function Footer() {
                         <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">Contact Us</h2>
                         <nav className="list-none mb-10">
                             <li>
-                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer">Phone: 0320-0906066</a>
+                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer">Phone: +92 331 5055501</a>
                             </li>
                             <li>
-                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer">Email: heritagehides@gmail.com</a>
+                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer">Email: haarisanjum@heritagehides.com  </a>
                             </li>
                             <li>
                                 <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer">Address: 123 Main Street, Anytown, CA 12345 - USA</a>
@@ -90,7 +102,7 @@ export default function Footer() {
             <div className="bg-brown-600">
                 <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
                     <p className="text-white text-sm text-center sm:text-left">© 2020 Heritage Hides —
-                        <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-white text-md font-rajdhani ml-1" target="_blank">@knyttneve</a>
+                        <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-white text-md font-rajdhani ml-1" target="_blank">@heritagehides.com</a>
                     </p>
                     <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">
                         <a className="text-white">

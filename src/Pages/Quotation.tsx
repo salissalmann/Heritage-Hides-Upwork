@@ -1,5 +1,7 @@
 
 export default function Quotation() {
+    window.scrollTo(0, 0)
+
     return (
         <>
             <section className="py-16 bg-new-600 font-rajdhani dark:bg-new-600">

@@ -4,6 +4,8 @@ import { useEffect, useState } from "react"
 import { useNavigate } from "react-router-dom"
 
 export default function ShopPage() {
+    window.scrollTo(0, 0)
+
     const navigate = useNavigate()
     const { type } = useParams()
     const [products, setProducts] = useState(Products)
@@ -97,7 +99,7 @@ export default function ShopPage() {
                         {products.map(
                             (product) => {
                                 return (
-                                    <div className="p-4 md:w-1/4 m-4">
+                                    <div className="p-4 md:w-1/4 m-4 lg:m-0">
                                         <div className="h-full border b-1 border-yellow-500 rounded overflow-hidden bg-new-600 p-3">
                                             <img className="max-h-50 w-full object-cover object-center bg-brown-700"
                                                 loading="lazy"

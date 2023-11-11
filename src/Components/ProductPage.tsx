@@ -1,11 +1,12 @@
 
-import React, { useState } from 'react'
+import { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Products } from '../Meta/BackbacksMeta'
 import Form from './Form'
 
 
 export default function ProductPage() {
+    window.scrollTo(0, 0)
 
     const { articleId } = useParams()
 

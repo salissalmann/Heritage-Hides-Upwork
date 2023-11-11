@@ -36,6 +36,23 @@ function App() {
           <Route path="/quotation" element={<Quotation />} />
         </Routes>
 
+        <div className="fixed bottom-4 right-4 z-50">
+          <button
+            onClick={() => {
+              window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+              })
+            }}
+            className="bg-brown-700 rounded-full w-12 h-12 flex items-center justify-center text-white text-2xl"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none"
+              viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                d="M5 15l7-7 7 7" />
+            </svg>
+          </button>
+        </div>
 
         <Footer />
       </BrowserRouter>

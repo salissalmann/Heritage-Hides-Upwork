@@ -1,10 +1,11 @@
 import { useNavigate } from 'react-router-dom'
 
 export default function AboutUs() {
+    window.scrollTo(0, 0)
     const Navigate = useNavigate()
     return (
         <>
-            <section className="flex items-center bg-new-600 lg:h-screen font-poppins dark:bg-new-600 mt-3">
+            <section className="flex items-center bg-new-600 lg:h-screen font-poppins dark:bg-new-600 mt-6">
                 <div className="justify-center flex-1 max-w-6xl py-4 mx-auto lg:py-6 md:px-6">
                     <div className="px-4 mb-10 md:text-center md:mb-20">
                         <p className="mb-2 text-xl font-rajdhani font-semibold text-blue-500 dark:text-brown-700">

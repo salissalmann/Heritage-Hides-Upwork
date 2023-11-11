@@ -228,6 +228,7 @@ export default function Quotation() {
                         <button
                             className="w-full py-2 text-sm font-bold leading-normal text-white transition-all duration-300  dark:bg-brown-700 dark:hover:bg-brown-600 hover:bg-blue-700"
                             onClick={submit}
+                            disabled={clicked}
                         >
                             Send Message
                         </button>

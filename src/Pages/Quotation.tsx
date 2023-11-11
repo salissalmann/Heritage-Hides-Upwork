@@ -1,6 +1,141 @@
 
+
+import React, { useState, useEffect } from 'react'
+import { notification } from 'antd'
+import emailjs from "@emailjs/browser";
+
+
 export default function Quotation() {
-    window.scrollTo(0, 0)
+    useEffect(() => {
+        window.scrollTo(0, 0)
+    }, [])
+
+
+    const [form, setForm] = useState({ firstName: "", lastName: "", phone: "", company: "", email: "", message: "" })
+    const [clicked, setClicked] = useState(false)
+
+
+    const handleChange = (
+        e:
+            | React.ChangeEvent<HTMLInputElement>
+            | React.ChangeEvent<HTMLTextAreaElement>
+    ) => {
+        setForm({ ...form, [e.target.name]: e.target.value })
+    }
+
+    useEffect(() => emailjs.init("VdQ-GDMozP9PtJFXL"), []);
+
+    const submit = (e:
+        | React.MouseEvent<HTMLButtonElement, MouseEvent>
+    ) => {
+        e.preventDefault();
+        setClicked(true)
+        //Email Validation
+        if (!form.email.includes('@')) {
+            notification.error({
+                message: 'Error!',
+                description: 'Please enter a valid email address.'
+            })
+            setClicked(false)
+            return
+        }
+        //Phone Validation
+        if (form.phone.length < 11) {
+            notification.error({
+                message: 'Error!',
+                description: 'Please enter a valid phone number.'
+            })
+            setClicked(false)
+            return
+        }
+        //Empty Fields
+        if (form.firstName === '') {
+            notification.error({
+                message: 'Error!',
+                description: 'Please enter your first name.'
+            })
+            setClicked(false)
+            return
+        }
+        if (form.lastName === '') {
+            notification.error({
+                message: 'Error!',
+                description: 'Please enter your last name.'
+            })
+            setClicked(false)
+            return
+        }
+        if (form.email === '') {
+            notification.error({
+                message: 'Error!',
+                description: 'Please enter your email.'
+            })
+            setClicked(false)
+            return
+        }
+
+        if (form.phone === '') {
+            notification.error({
+                message: 'Error!',
+                description: 'Please enter your phone number.'
+            })
+            setClicked(false)
+            return
+        }
+        if (form.message === '') {
+            notification.error({
+                message: 'Error!',
+                description: 'Please enter your message.'
+            })
+            setClicked(false)
+            return
+        }
+
+        if (form.company === '') {
+            notification.error({
+                message: 'Error!',
+                description: 'Please enter your message.'
+            })
+            setClicked(false)
+            return
+        }
+
+        notification.info(
+            {
+                message: 'Sending your request...'
+            }
+        )
+
+
+
+        emailjs.send("service_079uq4t", "template_73saxla", {
+            firstName: form.firstName,
+            lastName: form.lastName,
+            email: form.email,
+            phone: form.phone,
+            message: form.message,
+            company: form.company
+        }).then(() => {
+            notification.success({
+                message: 'Request sent!',
+                description: 'We have received your request. We will contact you soon.'
+            })
+            setForm({
+                firstName: '',
+                lastName: '',
+                email: '',
+                phone: '',
+                message: '',
+                company: ''
+            });
+        }).catch(() => {
+            notification.error({
+                message: 'Error!',
+                description: 'There was an error sending your request. Please try again later.'
+            })
+        });
+        setClicked(false)
+    }
 
     return (
         <>
@@ -30,51 +165,75 @@ export default function Quotation() {
                         </div>
                     </div>
                     <div className="px-8 py-8 border border-brown-700 rounded-md shadow-md">
-                        <form action="">
-                            <div className="mb-6">
-                                <h2 className="text-xl font-bold text-gray-00 ">
-                                    Please send message for futher information! </h2>
-                            </div>
-                            <div className="flex flex-wrap mb-4 -mx-2">
-                                <div className="w-full px-2 mb-4 lg:mb-0 lg:w-1/2">
-                                    <input
-                                        className="w-full px-3 py-1 leading-loose border  bg-new-600 border-brown-700"
-                                        type="text" placeholder="First Name.." required />
-                                </div>
-                                <div className="w-full px-2 lg:w-1/2">
-                                    <input
-                                        className="w-full px-3 py-1 leading-loose border bg-new-600 border-brown-700"
-                                        type="text" placeholder="Last Name.." required />
-                                </div>
-                            </div>
-                            <input
-                                className="w-full px-3 py-1 mb-4 leading-loose border bg-new-600 border-brown-700"
-                                type="email" placeholder="abc@gmail.com" required />
-                            <div className="flex flex-wrap mb-4 -mx-2">
-                                <div className="w-full px-2 mb-4 lg:mb-0 lg:w-1/2">
-                                    <input
-                                        className="w-full px-3 py-1 leading-loose border  bg-new-600 border-brown-700"
-                                        type="text" placeholder="Phone Number" required />
-                                </div>
-                                <div className="w-full px-2 lg:w-1/2">
-                                    <input
-                                        className="w-full px-3 py-1 leading-loose border bg-new-600 border-brown-700"
-                                        type="text" placeholder="Company" required />
-                                </div>
-                            </div>
+                        <div className="mb-6">
+                            <h2 className="text-xl font-bold text-gray-00 ">
+                                Please send message for futher information! </h2>
+                        </div>
+                        <div className="flex flex-wrap mb-4 -mx-2">
+                            <div className="w-full px-2 mb-4 lg:mb-0 lg:w-1/2">
+                                <input
+                                    className="w-full px-3 py-1 leading-loose border  bg-new-600 border-brown-700"
+                                    type="text" placeholder="First Name.." required
+                                    name="firstName"
+                                    value={form.firstName}
+                                    onChange={handleChange}
 
+                                />
+                            </div>
+                            <div className="w-full px-2 lg:w-1/2">
+                                <input
+                                    className="w-full px-3 py-1 leading-loose border bg-new-600 border-brown-700"
+                                    type="text" placeholder="Last Name.." required
+                                    name="lastName"
+                                    value={form.lastName}
+                                    onChange={handleChange}
 
-                            <textarea placeholder="Write a message..." required
-                                className="block w-full px-4 py-2 mb-4 leading-tight border-brown-700 text-brown-700 border  bg-new-600 "></textarea>
-                            <button
-                                className="w-full py-2 text-sm font-bold leading-normal text-white transition-all duration-300  dark:bg-brown-700 dark:hover:bg-brown-600 hover:bg-blue-700">
-                                Send Message
-                            </button>
-                        </form>
+                                />
+                            </div>
+                        </div>
+                        <input
+                            className="w-full px-3 py-1 mb-4 leading-loose border bg-new-600 border-brown-700"
+                            type="email" placeholder="abc@gmail.com" required
+                            name="email"
+                            value={form.email}
+                            onChange={handleChange}
+                        />
+                        <div className="flex flex-wrap mb-4 -mx-2">
+                            <div className="w-full px-2 mb-4 lg:mb-0 lg:w-1/2">
+                                <input
+                                    className="w-full px-3 py-1 leading-loose border  bg-new-600 border-brown-700"
+                                    type="text" placeholder="Phone Number" required
+                                    name="phone"
+                                    value={form.phone}
+                                    onChange={handleChange}
+
+                                />
+                            </div>
+                            <div className="w-full px-2 lg:w-1/2">
+                                <input
+                                    className="w-full px-3 py-1 leading-loose border bg-new-600 border-brown-700"
+                                    type="text" placeholder="Company" required
+                                    name="company"
+                                    value={form.company}
+                                    onChange={handleChange}
+                                />
+                            </div>
+                        </div>
+                        <textarea placeholder="Write a message..." required
+                            className="block w-full px-4 py-2 mb-4 leading-tight border-brown-700 text-brown-700 border  bg-new-600"
+                            name="message"
+                            value={form.message}
+                            onChange={handleChange}
+                        ></textarea>
+                        <button
+                            className="w-full py-2 text-sm font-bold leading-normal text-white transition-all duration-300  dark:bg-brown-700 dark:hover:bg-brown-600 hover:bg-blue-700"
+                            onClick={submit}
+                        >
+                            Send Message
+                        </button>
+
                     </div>
-
                 </div>
-
             </section>
         </>
     )

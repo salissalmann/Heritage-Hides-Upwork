@@ -54,20 +54,21 @@ export default function Footer() {
                         </nav>
                     </div>
                     <div className="lg:w-1/3 md:w-1/2 w-full px-4">
-                        <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">CATEGORIES</h2>
+                        <h2 className="title-font font-medium text-white tracking-widest text-sm mb-3">Pages</h2>
                         <nav className="list-none mb-10">
                             <li>
-                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer">First Link</a>
+                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer">Home</a>
                             </li>
                             <li>
-                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer">Second Link</a>
+                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer">About Us</a>
                             </li>
                             <li>
-                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer">Third Link</a>
+                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer">Contact</a>
                             </li>
                             <li>
-                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer">Fourth Link</a>
+                                <a className="text-white text-md font-rajdhani hover:text-new-500 cursor-pointer">Request Quotatation</a>
                             </li>
+
                         </nav>
                     </div>
                     <div className="lg:w-1/3 md:w-1/2 w-full px-4">

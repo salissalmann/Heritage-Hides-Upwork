@@ -1,6 +1,9 @@
+import { useState } from "react"
 import { useNavigate } from "react-router-dom"
+
 export default function Navigation() {
     const navigate = useNavigate()
+    const [isDropdownOpen, setIsDropdownOpen] = useState(false)
     return (
         <>
             <header className="bg-brown-700 fixed 
@@ -32,7 +35,9 @@ export default function Navigation() {
                                     <li>
                                         <a
                                             className="text-white transition hover:text-white/75 font-rajdhani text-md cursor-pointer"
-                                            href="/"
+                                            onClick={
+                                                () => navigate('/about')
+                                            }
                                         >
                                             About
                                         </a>
@@ -41,7 +46,7 @@ export default function Navigation() {
                                     <li>
                                         <a
                                             className="text-white transition hover:text-white/75 font-rajdhani text-md cursor-pointer"
-                                            href="/"
+                                            onClick={() => navigate('/contact')}
                                         >
                                             Contact
                                         </a>
@@ -49,13 +54,96 @@ export default function Navigation() {
 
                                     <li>
                                         <a
-                                            className="text-white transition hover:text-white/75 font-rajdhani text-md cursor-pointer"
-                                            onClick={() => navigate('/shop/all')}
+                                            className="text-white relative transition hover:text-white/75 font-rajdhani text-md cursor-pointer"
+                                            onMouseEnter={
+                                                () => setIsDropdownOpen(true)
+                                            }
+                                            onMouseLeave={
+                                                () => setIsDropdownOpen(false)
+                                            }
+                                            onClick={() => {
+                                                navigate(
+                                                    '/shop/all'
+                                                )
+                                            }}
                                         >
                                             Shop Now
                                         </a>
-                                    </li>
-                                    <button
+                                        {/* Dropdown Content */}
+                                        {isDropdownOpen && (
+                                            <div className="absolute top-11 bg-white rounded shadow-lg p-4 "
+                                                onMouseEnter={
+                                                    () => setIsDropdownOpen(true)
+                                                }
+                                                onMouseLeave={
+                                                    () => setIsDropdownOpen(false)
+                                                }
+                                            >
+                                                <ul className="flex flex-col gap-1">
+                                                    <li>
+                                                        <a
+                                                            className="text-brown-700 transition hover:text-brown-700/75 font-bold font-rajdhani text-md cursor-pointer"
+                                                            onClick={() => {
+                                                                navigate(
+                                                                    '/shop/all'
+                                                                )
+                                                            }}
+                                                        >
+                                                            All
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            className="text-brown-700 transition hover:text-brown-700/75 font-bold font-rajdhani text-md cursor-pointer"
+                                                            onClick={() => {
+                                                                navigate(
+                                                                    '/shop/backpacks'
+                                                                )
+                                                            }}
+                                                        >
+                                                            Backpacks
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            className="text-brown-700 transition hover:text-brown-700/75 font-bold font-rajdhani text-md cursor-pointer"
+                                                            onClick={() => {
+                                                                navigate(
+                                                                    '/shop/duffle bags'
+                                                                )
+                                                            }}
+                                                        >
+                                                            Duffle Bags
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            className="text-brown-700 transition hover:text-brown-700/75 font-bold font-rajdhani text-md cursor-pointer"
+                                                            onClick={() => {
+                                                                navigate(
+                                                                    '/shop/tote bags'
+                                                                )
+                                                            }}
+                                                        >
+                                                            Tote Bags
+                                                        </a>
+                                                    </li>
+                                                    <li>
+                                                        <a
+                                                            className="text-brown-700 transition hover:text-brown-700/75 font-bold font-rajdhani text-md cursor-pointer"
+                                                            onClick={() => {
+                                                                navigate(
+                                                                    '/shop/laptop bags'
+                                                                )
+                                                            }}
+                                                        >
+                                                            Laptop Bags
+                                                        </a>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        )}
+                                    </li>                                    <button
                                         className="
                                             bg-white
                                             text-brown-700
@@ -71,6 +159,9 @@ export default function Navigation() {
                                             ease-in-out
                                             font-rajdhani
                                             "
+                                        onClick={() => {
+                                            navigate('/quotation')
+                                        }}
                                     >Get Quote</button>
 
                                 </ul>

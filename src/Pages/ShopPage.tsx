@@ -92,12 +92,12 @@ export default function ShopPage() {
 
                     </ol>
                 </nav>
-                <div className="container px-20 py-14 mx-auto">
+                <div className="container md:px-20 py-14 mx-auto">
                     <div className="flex flex-wrap -m-4">
                         {products.map(
                             (product) => {
                                 return (
-                                    <div className="p-4 md:w-1/4">
+                                    <div className="p-4 md:w-1/4 m-4">
                                         <div className="h-full border b-1 border-yellow-500 rounded overflow-hidden bg-new-600 p-3">
                                             <img className="max-h-50 w-full object-cover object-center bg-brown-700"
                                                 loading="lazy"

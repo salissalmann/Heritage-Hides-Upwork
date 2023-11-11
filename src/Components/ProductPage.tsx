@@ -1,6 +1,8 @@
-import React from 'react'
+
+import React, { useState } from 'react'
 import { useParams } from 'react-router-dom'
 import { Products } from '../Meta/BackbacksMeta'
+import Form from './Form'
 
 
 export default function ProductPage() {
@@ -8,7 +10,11 @@ export default function ProductPage() {
     const { articleId } = useParams()
 
     const product = Products.find((product) => product["Article-No"].toString() === articleId)
+    const [selectedIndex, setSelectedIndex] = useState(-1)
 
+    //remove spaces from image link and replace it by no space
+    const ImageLink = `${product?.Category.toLowerCase()}/${product?.["Article-No"]}/${product?.["Article-No"]}`.replace(/ /g, '')
+    const [hoveredImage, setHoveredImage] = useState('');
 
 
     return (
@@ -17,21 +23,52 @@ export default function ProductPage() {
                 <div className="lg:w-4/5 mx-auto flex flex-wrap border border-brown-500 rounded-lg">
                     <section className="text-gray-600 body-font">
                         <div className="container px-5 py-12 mx-auto flex flex-wrap">
-                            <div className="flex flex-wrap md:-m-2 -m-1">
-                                <div className="flex flex-wrap w-1/2">
-                                    <div className="md:p-2 p-1 w-full">
-                                        <img alt="gallery" className="w-full h-full object-cover border object-center block" src={`/Products/${product?.["Article-No"]}.jpg`} />
+                            <div className="flex flex-col lg:flex-row  md:-m-2 -m-1">
+                                <div className="flex flex-wrap w-full lg:w-1/2">
+                                    <div className="md:p-2 p-1 w-full relative">
+                                        <img
+                                            alt="gallery"
+                                            className="w-full h-full object-cover border object-center block"
+                                            src={`/Products/${product?.["Article-No"]}.jpg`}
+                                        />
+                                        {hoveredImage && (
+                                            <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75">
+                                                <img
+                                                    alt="hovered-gallery"
+                                                    className="w-full h-full object-cover border object-center block"
+                                                    src={hoveredImage}
+                                                />
+                                            </div>
+                                        )}
                                     </div>
-                                    <div className="md:p-2 p-1 w-1/2">
-                                        <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://dummyimage.com/502x302" />
-                                    </div>
-                                    <div className="md:p-2 p-1 w-1/2">
-                                        <img alt="gallery" className="w-full object-cover h-full object-center block" src="https://dummyimage.com/503x303" />
-                                    </div>
+                                    {[1, 2, 3, 4].map((index) => (
+                                        <div key={index} className="md:p-2 p-1 w-1/4 relative">
+                                            {index !== selectedIndex ?
+                                                <img
+                                                    alt={`gallery-${index}`}
+                                                    className="w-full object-cover h-full border object-center block"
+                                                    src={`/${ImageLink}_${index}.jpg`}
+                                                    onClick={() => {
+                                                        setHoveredImage(`/${ImageLink}_${index}.jpg`)
+                                                        setSelectedIndex(index)
+                                                    }}
+                                                /> :
+                                                <img
+                                                    alt={`gallery-${index}`}
+                                                    className="w-full object-cover h-full border object-center block"
+                                                    src={`/Products/${product?.["Article-No"]}.jpg`}
+                                                    onClick={() => {
+                                                        setHoveredImage('')
+                                                        setSelectedIndex(-1)
+                                                    }}
+                                                />
+                                            }
+                                        </div>
+                                    ))}
                                 </div>
-                                <div className="flex flex-wrap w-1/2">
+                                <div className="flex flex-wrap w-full lg:w-1/2">
                                     <div className="lg:w-full w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
-                                        <h1 className="text-brown-700 font-bold text-3xl font-rajdhani mb-1">Article-Number: {product?.['Article-No']}</h1>
+                                        <h1 className="text-brown-700 font-bold text-3xl font-rajdhani mb-1">Article-Number: {product?.['Article-No']} {product?.Category}</h1>
                                         <h2 className="text-sm text-brown-700 font-rajdhani tracking-widest">Dimensions: {product?.Dimensions}</h2>
 
                                         <div className="flex mb-4">
@@ -55,19 +92,9 @@ export default function ProductPage() {
                                             </span>
                                         </div>
                                         <p className="leading-relaxed text-black font-rajdhani font-semibold">{product?.Description}</p>
-                                        <div className="flex mt-6 items-center pb-5 border-b-2 border-brown-700 mb-5">
+                                        <div className="flex mt-6 items-center pb-1 border-b-2 border-brown-700 mb-7">
                                         </div>
-                                        <div className="flex">
-                                            <button className="flex ml-auto text-white bg-brown-700 py-2 px-6 focus:outline-none hover:bg-transparent
-                                            hover:text-brown-700
-                                            hover:border
-                                             border border-brown-700">Button</button>
-                                            <button className="rounded-full w-10 h-10 bg-gray-200 p-0 border-0 inline-flex items-center justify-center text-gray-500 ml-4">
-                                                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-5 h-5" viewBox="0 0 24 24">
-                                                    <path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"></path>
-                                                </svg>
-                                            </button>
-                                        </div>
+                                        {articleId && <Form artcileId={articleId} />}
                                     </div>
                                 </div>
                             </div>

@@ -226,7 +226,7 @@ export default function Quotation() {
                             onChange={handleChange}
                         ></textarea>
                         <button
-                            className="w-full py-2 text-sm font-bold leading-normal text-white transition-all duration-300  dark:bg-brown-700 dark:hover:bg-brown-600 hover:bg-blue-700"
+                            className="w-full py-2 text-sm font-bold leading-normal text-white transition-all duration-300  bg-brown-700 hover:bg-brown-600 "
                             onClick={submit}
                             disabled={clicked}
                         >

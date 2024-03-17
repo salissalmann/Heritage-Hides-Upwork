@@ -12,7 +12,7 @@ export default function Discover() {
                     </p>
                 </header>
 
-                <ul className="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-3">
+                <ul className="grid grid-cols-1 gap-4 mt-8 lg:grid-cols-2">
                     <li>
                         <a className="relative block group" onClick={
                             () => navigate('/shop/tote bags')
@@ -83,7 +83,43 @@ export default function Discover() {
                         </a>
                     </li>
 
-                    <li className="lg:col-span-2 lg:col-start-2 lg:row-span-2 lg:row-start-1">
+                    <li>
+                        <a className="relative block group"
+                            onClick={
+                                () => navigate('/shop/laptop bags')
+                            }
+                        >
+                            <img
+                                src="/Assets/LaptopBags.png" alt="Featured2"
+                                className="object-cover w-full transition duration-500 aspect-square group-hover:opacity-90"
+                            />
+
+                            <div
+                                className="absolute inset-0 flex flex-col items-start justify-end p-6"
+                            >
+                                <h3 className="text-xl font-bold font-rajdhani text-white">Laptop Bags</h3>
+
+                                <span
+                                    className="mt-1.5 inline-block bg-black px-5 py-3 text-xs font-medium uppercase tracking-wide
+                                     text-white
+                                     hover:bg-transparent
+                                        hover:text-black
+                                        transition
+                                        duration-300
+                                        hover:border
+                                        hover:border-black
+                                     "
+                                    onClick={() => {
+                                        navigate('/shop/laptop bags')
+                                    }}
+                                >
+                                    Shop Now
+                                </span>
+                            </div>
+                        </a>
+                    </li>
+
+                    <li>
                         <a className="relative block group"
                             onClick={
                                 () => navigate('/shop/backpacks')

@@ -3,7 +3,7 @@ export const Products = [
         "Category": "BackPacks",
         "Article-No": 1101,
         "Dimensions": "Size=H=18”+W=5.5”+L=12.5”",
-        "Description": "Elevate your everyday with our exceptional Leather Bag, a true embodiment of timeless craftsmanship and modern versatility.Whether you're headed to the office, embarking on a hiking adventure, or simply stepping out for a casual outing, this bag effortlessly combines functionality, durability, and style.Available in four captivating colors, it's",
+        "Description": "Elevate your everyday with our exceptional Leather Bag, a true embodiment of timeless craftsmanship and modern versatility.Whether you're headed to the office, embarking on a hiking adventure, or simply stepping out for a casual outing, this bag effortlessly combines functionality, durability, and style.Available in four captivating colors, it's the perfect companion to elevate any outfit and make a statement wherever you go.",
         "Extra-Description-Head": "Crafted from Premium Cow Hide",
         "Extra-Description-Body": "Our Leather Bag is meticulously crafted from the finest cowhide, ensuring it stands the test of time.The supple and resilient leather not only exudes sophistication but also promises to age gracefully, developing a beautiful patina with each passing day.",
         "Characteristics": [

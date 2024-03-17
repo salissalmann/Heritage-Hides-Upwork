@@ -71,28 +71,7 @@ export default function ProductPage() {
                                     <div className="lg:w-full w-full lg:pl-10 lg:py-6 mt-6 lg:mt-0">
                                         <h1 className="text-brown-700 font-bold text-3xl font-rajdhani mb-1">Article-Number: {product?.['Article-No']} {product?.Category}</h1>
                                         <h2 className="text-sm text-brown-700 font-rajdhani tracking-widest">Dimensions: {product?.Dimensions}</h2>
-
-                                        <div className="flex mb-4">
-                                            <span className="flex items-center">
-                                                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 text-yellow-300" viewBox="0 0 24 24">
-                                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                                                </svg>
-                                                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 text-yellow-300" viewBox="0 0 24 24">
-                                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                                                </svg>
-                                                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 text-yellow-300" viewBox="0 0 24 24">
-                                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                                                </svg>
-                                                <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 text-yellow-300" viewBox="0 0 24 24">
-                                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                                                </svg>
-                                                <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" className="w-4 h-4 text-yellow-300" viewBox="0 0 24 24">
-                                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
-                                                </svg>
-                                                <span className="text-brown-700 font-rajdhani ml-3">4 Reviews</span>
-                                            </span>
-                                        </div>
-                                        <p className="leading-relaxed text-black font-rajdhani font-semibold">{product?.Description}</p>
+                                        <p className="leading-relaxed text-black font-rajdhani font-semibold mt-4">{product?.Description}</p>
                                         <div className="flex mt-6 items-center pb-1 border-b-2 border-brown-700 mb-7">
                                         </div>
                                         {articleId && <Form artcileId={articleId} />}

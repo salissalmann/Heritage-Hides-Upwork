@@ -21,13 +21,13 @@ export default function LandingPage() {
                                 text-white
                                 text-center
                                 font-rajdhani
-                                '>EARLY HOLIDAY SALE</h1>
+                                '>We Materialize Leather</h1>
                         <p className='
                                 text-2xl
                                 text-white
                                 text-center
                                 font-rajdhani
-                                '>Up to 50% off on all products</p>
+                                '>Get your wholesale quotatios now.</p>
                         <div className={styles.SliderBtns}>
                             <button
                                 onClick={() => { navigate('/shop/all') }}
@@ -90,30 +90,6 @@ export default function LandingPage() {
             <div className={styles.Featured}>
                 <About />
             </div >
-
-            <div className='border border-brown-700'>
-                <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-10 ">
-                    <div className="grid row-gap-8 sm:grid-cols-3">
-                        <div className="text-center">
-                            <h6 className="text-5xl font-bold font-rajdhani text-brown-700">144K</h6>
-                            <p className="font-bold font-rajdhani">Customer</p>
-                        </div>
-                        <div className="text-center">
-                            <h6 className="text-5xl font-bold font-rajdhani text-brown-700">120</h6>
-                            <p className="font-bold font-rajdhani">Products</p>
-                        </div>
-                        <div className="text-center">
-                            <h6 className="text-5xl font-bold font-rajdhani text-brown-700">12</h6>
-                            <p className="font-bold font-rajdhani">Categories</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-
-
         </>
     )
 }

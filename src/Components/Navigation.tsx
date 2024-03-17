@@ -50,7 +50,8 @@ export default function Navigation() {
                                 font-semibold
                                 tracking-wider
                                 font-rajdhani
-                                ">Heritage Hides</h1>
+                                cursor-pointer
+                                " onClick={()=> window.location.href="/"}>Heritage Hides</h1>
                             </div>
 
                             <div className="md:flex md:items-center md:gap-12">

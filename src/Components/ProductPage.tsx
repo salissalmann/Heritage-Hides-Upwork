@@ -32,6 +32,66 @@ export default function ProductPage() {
                                             className="w-full h-full object-cover border object-center block"
                                             src={`/Products/${product?.["Article-No"]}.jpg`}
                                         />
+                                        <a
+                                            className="absolute top-[45%] right-0 p-2 bg-transparent text-black rounded-full z-10 cursor-pointer"
+                                            onClick={() => {
+                                                if (selectedIndex === -1) {
+                                                    setSelectedIndex(1)
+                                                    setHoveredImage(`/${ImageLink}_1.jpg`)
+                                                } else if (selectedIndex < 3) {
+                                                    setSelectedIndex(selectedIndex + 1)
+                                                    setHoveredImage(`/${ImageLink}_${selectedIndex + 1}.jpg`)
+                                                } else {
+                                                    setSelectedIndex(-1)
+                                                    setHoveredImage('')
+                                                }
+                                            }}
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="h-8 w-8"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                            >
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    strokeWidth={2}
+                                                    d="M9 5l7 7-7 7"
+                                                />
+                                            </svg>
+                                        </a>
+                                        <a
+                                            className="absolute top-[45%] left-0 p-2 bg-transparent text-black rounded-full z-10 cursor-pointer"
+                                            onClick={() => {
+                                                if (selectedIndex === -1) {
+                                                    setSelectedIndex(3)
+                                                    setHoveredImage(`/${ImageLink}_3.jpg`)
+                                                } else if (selectedIndex > 1) {
+                                                    setSelectedIndex(selectedIndex - 1)
+                                                    setHoveredImage(`/${ImageLink}_${selectedIndex - 1}.jpg`)
+                                                } else {
+                                                    setSelectedIndex(-1)
+                                                    setHoveredImage('')
+                                                }
+                                            }}
+                                        >
+                                            <svg
+                                                xmlns="http://www.w3.org/2000/svg"
+                                                className="h-8 w-8"
+                                                fill="none"
+                                                viewBox="0 0 24 24"
+                                                stroke="currentColor"
+                                            >
+                                                <path
+                                                    strokeLinecap="round"
+                                                    strokeLinejoin="round"
+                                                    strokeWidth={2}
+                                                    d="M15 19l-7-7 7-7"
+                                                />
+                                            </svg>
+                                        </a>
                                         {hoveredImage && (
                                             <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-75">
                                                 <img
@@ -42,12 +102,12 @@ export default function ProductPage() {
                                             </div>
                                         )}
                                     </div>
-                                    {[1, 2, 3, 4].map((index) => (
+                                    {[1, 2, 3].map((index) => (
                                         <div key={index} className="md:p-2 p-1 w-1/4 relative">
                                             {index !== selectedIndex ?
                                                 <img
                                                     alt={`gallery-${index}`}
-                                                    className="w-full object-cover h-full border object-center block"
+                                                    className="w-full h-full border object-center block"
                                                     src={`/${ImageLink}_${index}.jpg`}
                                                     onClick={() => {
                                                         setHoveredImage(`/${ImageLink}_${index}.jpg`)

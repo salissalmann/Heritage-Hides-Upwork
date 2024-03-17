@@ -264,6 +264,7 @@ export default function htmlForm({ artcileId }: htmlFormInterface) {
                         onChange={(e) => changeInputValue('quantity', e.target.value)}
                         value={form?.quantity}
                     />
+                    <h6>No. Of Units</h6>
                 </div>
             </div>
 

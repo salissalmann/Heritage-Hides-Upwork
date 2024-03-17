@@ -102,7 +102,7 @@ export default function ProductPage() {
                                             </div>
                                         )}
                                     </div>
-                                    {[1, 2, 3].map((index) => (
+                                    {[1, 2, 3, 4].map((index) => (
                                         <div key={index} className="md:p-2 p-1 w-1/4 relative">
                                             {index !== selectedIndex ?
                                                 <img

@@ -101,7 +101,7 @@ export default function Footer() {
             </div>
             <div className="bg-brown-600">
                 <div className="container mx-auto py-4 px-5 flex flex-wrap flex-col sm:flex-row">
-                    <p className="text-white text-sm text-center sm:text-left">© 2020 Heritage Hides —
+                    <p className="text-white text-sm text-center sm:text-left">© 2024 Heritage Hides —
                         <a href="https://twitter.com/knyttneve" rel="noopener noreferrer" className="text-white text-md font-rajdhani ml-1" target="_blank">@heritagehides.com</a>
                     </p>
                     <span className="inline-flex sm:ml-auto sm:mt-0 mt-2 justify-center sm:justify-start">

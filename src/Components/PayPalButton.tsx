@@ -2,7 +2,7 @@ import React from 'react';
 import { PayPalButtons } from '@paypal/react-paypal-js';
 
 const PayPalButton: React.FC = () => {
-  const handleApprove = (data: any, actions: any) => {
+  const handleApprove = (actions: any) => {
     return actions.order.capture().then((details: any) => {
       alert(`Transaction completed by ${details.payer.name.given_name}`);
     });
@@ -17,6 +17,7 @@ const PayPalButton: React.FC = () => {
           shape: 'rect',
           label: 'paypal',
         }}
+         // @ts-ignore
         createOrder={(data, actions) => {
           return actions.order.create({
             intent: 'CAPTURE', 

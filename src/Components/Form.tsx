@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import emailjs from "@emailjs/browser";
 import { useEffect } from 'react';
 import { notification } from 'antd';
+import PayPalButton from './PayPalButton';
 
 
 interface htmlFormInterface {
@@ -267,7 +268,13 @@ export default function htmlForm({ artcileId }: htmlFormInterface) {
                     <h6>No. Of Units</h6>
                 </div>
             </div>
-
+            <div>
+      <h1>PayPal Integration Example</h1>
+      
+      <div style={{ position: 'relative', zIndex: 1 }}>
+  <PayPalButton />
+</div>
+    </div>
             <button
                 className="text-white bg-brown-400 hover:bg-blue-800 focus:outline-none focus:ring-blue-300 font-medium  text-sm w-full sm:w-auto px-5 py-2.5 text-center dark:bg-brown-700 dark:hover:bg-brown-500 dark:focus:ring-blue-800 font-rajdhani"
                 onClick={Submit}
